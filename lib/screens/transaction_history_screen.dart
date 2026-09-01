@@ -152,12 +152,14 @@ class _TransactionHistoryScreenState extends State<TransactionHistoryScreen> {
                               // Date Header
                               Padding(
                                 padding: const EdgeInsets.fromLTRB(16, 16, 16, 8),
-                                style: const TextStyle(
-                                  fontSize: 13,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.grey,
+                                child: Text(
+                                  dateGroupKey.toUpperCase(),
+                                  style: const TextStyle(
+                                    fontSize: 13,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.grey,
+                                  ),
                                 ),
-                                child: Text(dateGroupKey.toUpperCase()),
                               ),
                               ...groupItems.map((tx) {
                                 final isIncome = tx.type == 'income';
